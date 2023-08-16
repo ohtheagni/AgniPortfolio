@@ -1,17 +1,51 @@
 "use client";
 
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import headShot from '@/public/head_shot_cropped.jpg'
 import Link from 'next/link';
 import { BsArrowRight, BsGithub, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
 import { FaGithubSquare } from 'react-icons/fa';
+import { useSectionInView } from '@/lib/hooks';
+import { useActiveSectionContext } from '@/context/active-section-context';
+import Typed from 'typed.js';
+
 
 export default function Intro() {
+    const { ref } = useSectionInView("Home");
+    const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+    const typedRef = useRef(null);
+
+    // Use useEffect to initialize Typed.js once the component mounts
+    useEffect(() => {
+        const options = {
+            strings: [
+                "Front End Developer",
+                "Back End Developer",
+                "Full Stack Developer",
+
+                // Add more strings as needed
+            ],
+            typeSpeed: 100, // Adjust typing speed as needed
+            backSpeed: 110, // Adjust backspacing speed as needed
+            startDelay: 2000,
+            showCursor: true,
+
+        };
+
+        const typed = new Typed(typedRef.current, options);
+
+        // Clean up on unmount
+        return () => {
+            typed.destroy();
+        };
+    }, []); // Empty dependency array to ensure this runs only once
+
+
   return (
-    <section className='mb-28 max-w-[50rem] text-center sm:mb-0'>
+    <section id="home" ref={ref} className='mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]'>
         <div className="flex items-center justify-center">
             <div className="relative">
                 <motion.div
@@ -54,10 +88,12 @@ export default function Intro() {
             animate={{ opacity: 1, y:0 }}
         >
         <span className="font-bold">Hello, I'm John.</span> I'm a{" "}
-        <span className="font-bold">full-stack developer</span> with{" "}
-        <span className="font-bold">1 year</span> of experience. I enjoy
-        building <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline">React (Next.js)</span>.
+        <span ref={typedRef} className="font-bold">Software Engineer</span>
+        <div>
+            <span className="font-bold">with{"  "} 1 year</span> of experience. I enjoy
+            building <span className="italic">sites & apps</span>. My focus is{" "}
+            <span className="underline">React (Next.js)</span>.
+        </div>
         </motion.h1>
 
         <motion.div
@@ -68,17 +104,23 @@ export default function Intro() {
                 delay: 0.1
             }}
         >
-            <Link className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition' href="#contact">
+            <Link
+             className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'
+            href="#contact"
+            onClick={() => {
+                setActiveSection("Contact");
+                setTimeOfLastClick(Date.now )
+            }}>
                 Contact me here <BsArrowRight className=' group-hover:translate-x-1 transition opacity-70'/>
             </Link>
-            <a className=' group bg-white text-black px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border-black/10' href='/JohnClifford_Agni_Resume.pdf' download>
+            <a className='group bg-white text-black px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border-black/10' href='/JohnClifford_Agni_Resume.pdf dark:bg-white/10' download>
                 Resume <HiDownload className='opacity-60 group-hover:translate-y-1 transition' />
             </a>
 
-            <a className='group bg-white text-black p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border-black/10' href="https://www.linkedin.com/in/john-agni/" target="_blank">
+            <a className='group bg-white text-black p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border-black/10 dark:bg-white/10 dark:text-white/60' href="https://www.linkedin.com/in/john-agni/" target="_blank">
                 <BsLinkedin  />
             </a>
-            <a className='bg-white text-black p-4 flex items-center gap-2 rounded-full text-[1.15rem]  focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border-black/10' href="https://github.com/ohtheagni" target="_blank">
+            <a className='bg-white text-black p-4 flex items-center gap-2 rounded-full text-[1.15rem]  focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border-black/10 dark:bg-white/10 dark:text-white/60' href="https://github.com/ohtheagni" target="_blank">
                 <FaGithubSquare />
             </a>
         </motion.div>
