@@ -6,7 +6,7 @@ import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 import dishdynamo from "@/public/dishdynamo.png"
-import searchrecipe from "@/public/search-recipe-name.png"
+import sales from "@/public/sales.png"
 
 
 export const links = [
@@ -38,29 +38,38 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Bachelor of Business Administration Management | University Of Hawaii at Manoa",
+    location: "Honolulu, HI",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "Relevant Coursework: Discrete Mathmatics in Computer Science, Introduction to Computer Science, Information Systems for Global Business Environment, Statistical Analysis for Business Descisions, Kappa Sigma Fraternity",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2017",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Management Trainee | Enterprise Holdings",
+    location: "Honolulu, HI",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "Generated over $5 Million per year in revenue helping manage branch operations in West Oahu. Analyzed business reports and resolving 200+ customer issues a month by providing best service prior to and after",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2018 - 2020",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "English Instructor",
+    location: "Tokyo, JP",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "Applied innovative teaching strategies to help students of all ages improve their English speaking skill. Utilized EdTech which analyzed students' pronunciation and provided instant feedback",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "2020 - 2022",
   },
+  {
+    title: "Graduated Bootcamp | Hack Reactor",
+    location: "San Francisco, CA",
+    description:
+      "Passion for coding lead me to level up my skills as a software developer with technologies such as Javascript and Python",
+    icon: React.createElement(LuGraduationCap),
+    date: "2023",
+
+  }
 ] as const;
 
 export const projectsData = [
@@ -68,39 +77,35 @@ export const projectsData = [
     title: "DishDynamo",
     description:
       "I worked as a full stack webdevloper to create a webapplication that allows user to search and create recipes based on ingredients on hand",
-    tags: ["React", "MongoDB", "ChakraUI", "FastAPI"],
+    tags: ["React", "MongoDB", "ChakraUI", "FastAPI", "Javascript", "JWTdown"],
     imageUrl: dishdynamo,
+    projectUrl: "https://gitlab.com/team-scrumtious/dish-dynamo",
   },
   {
-    title: "searchrecipe",
+    title: "CarCar",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: searchrecipe,
-  },
-  {
-    title: "Word Analytics",
-    description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: dishdynamo,
+      "Internal application for car dealerships to manage their inventory, service, and sales.",
+    tags: ["Django", "SQLite", "Microservices", "React", "RestfulAPI", "Docker"],
+    imageUrl: sales,
+    projectUrl: "https://gitlab.com/charlene.xu92/project-beta",
   },
 ] as const;
 
 export const skillsData = [
   "HTML5",
   "CSS",
-  "JavaScript ES6+",
+  "Javascript",
   "TypeScript",
   "React",
-  "Next.js",
-  "Node.js",
+  "NextJS",
+  "NodeJS",
   "Git",
   "Tailwind",
   "Django4",
-  "PostgreSQL",
+  "PostGreSQL",
   "MongoDB",
   "FastAPI",
   "Python",
-  "Framer Motion",
+  "FramerMotion",
+  "Docker",
 ] as const;

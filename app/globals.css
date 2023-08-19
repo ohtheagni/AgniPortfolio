@@ -12,3 +12,34 @@ html.dark {
 .borderBlack {
     @apply border border-black/10;
 }
+
+.icon-size {
+    font-size: 100px;
+  }
+
+
+  .tooltip-container {
+    position: relative;
+    cursor: pointer; /* Change cursor to indicate interactivity */
+  }
+
+  .tooltip-text {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 4px 8px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s;
+    font-size: 18px;
+  }
+
+  .tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }

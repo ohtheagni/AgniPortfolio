@@ -7,7 +7,7 @@ import headShot from '@/public/head_shot_cropped.jpg'
 import Link from 'next/link';
 import { BsArrowRight, BsGithub, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
-import { FaGithubSquare } from 'react-icons/fa';
+import { FaGithubSquare, FaGitlab } from 'react-icons/fa';
 import { useSectionInView } from '@/lib/hooks';
 import { useActiveSectionContext } from '@/context/active-section-context';
 import Typed from 'typed.js';
@@ -29,7 +29,7 @@ export default function Intro() {
                 // Add more strings as needed
             ],
             typeSpeed: 100, // Adjust typing speed as needed
-            backSpeed: 110, // Adjust backspacing speed as needed
+            backSpeed: 80, // Adjust backspacing speed as needed
             startDelay: 2000,
             showCursor: true,
 
@@ -87,13 +87,12 @@ export default function Intro() {
             initial={{ opacity: 0, y: 0 }}
             animate={{ opacity: 1, y:0 }}
         >
+        <div className='text-lg'>
+        From Foundation to Future: Building Impact Through Iterative Excellence
+        </div>
         <span className="font-bold">Hello, I'm John.</span> I'm a{" "}
         <span ref={typedRef} className="font-bold">Software Engineer</span>
-        <div>
-            <span className="font-bold">with{"  "} 1 year</span> of experience. I enjoy
-            building <span className="italic">sites & apps</span>. My focus is{" "}
-            <span className="underline">React (Next.js)</span>.
-        </div>
+
         </motion.h1>
 
         <motion.div
@@ -122,6 +121,10 @@ export default function Intro() {
             </a>
             <a className='bg-white text-black p-4 flex items-center gap-2 rounded-full text-[1.15rem]  focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border-black/10 dark:bg-white/10 dark:text-white/60' href="https://github.com/ohtheagni" target="_blank">
                 <FaGithubSquare />
+            </a>
+
+            <a className='bg-white text-black p-4 flex items-center gap-2 rounded-full text-[1.15rem]  focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border-black/10 dark:bg-white/10 dark:text-white/60' href="https://gitlab.com/ohtheagni" target="_blank">
+                <FaGitlab />
             </a>
         </motion.div>
     </section>

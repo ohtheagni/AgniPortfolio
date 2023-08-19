@@ -18,32 +18,22 @@ export default function About() {
       id="about"
       >
         <SectionHeading>About Me</SectionHeading>
-        <p className='mb-3'>
-        After graduating with a degree in{" "}
-        <span className="font-medium">Accounting</span>, I decided to pursue my
-        passion for programming. I enrolled in a coding bootcamp and learned{" "}
-        <span className="font-medium">full-stack web development</span>.{" "}
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem. My core stack
-        is{" "}
-        <span className="font-medium">
-          React, Next.js, Node.js, and MongoDB
-        </span>
-        . I am also familiar with TypeScript and Prisma. I am always looking to
-        learn new technologies. I am currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software
-        developer.
-        </p>
 
-        <p>
-        <span className="italic">When I'm not coding</span>, I enjoy playing
-        video games, watching movies, and playing with my dog. I also enjoy{" "}
-        <span className="font-medium">learning new things</span>. I am currently
-        learning about{" "}
-        <span className="font-medium">history and philosophy</span>. I'm also
-        learning how to play the guitar.
+        < p className='mb-3 text-left'>
+          Former educator turned software engineer, I'm obsessed with code. Now I'm on a mission to turn visions to realty.
+          I bring a unique blend of skills and experiences to the world of software engineering. My previous career as a teacher in
+          Japan honed my exceptional communication skills, patience, and adaptability. These qualities, combined with my passion for problem-solving,
+          have seamlessly transitioned into my role as a software engineer. Whether it's collaborating with diverse teams, meticulously analyzing code,
+          or empathizing with end-users, my background has equipped me to excel in this dynamic field. I am dedicated to delivering innovative solutions
+          while maintaining a keen eye for detail, making me a valuable asset in any software development project
+          With each line of code I write, my passion ignites as I envision the tangible impact it can have, shaping a better
+          experience for users and bringing real value to their lives.
         </p>
+          <p>
+            When I'm not coding I'm usually working out, trying out a new restaurant or reviewing craft beers.
+          </p>
+
+
     </motion.section>
   )
 }
