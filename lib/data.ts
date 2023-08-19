@@ -7,6 +7,7 @@ import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 import dishdynamo from "@/public/dishdynamo.png"
 import sales from "@/public/sales.png"
+import createrecipe from "@/public/createrecipe.png"
 
 
 export const links = [
@@ -78,7 +79,7 @@ export const projectsData = [
     description:
       "I worked as a full stack webdevloper to create a webapplication that allows user to search and create recipes based on ingredients on hand",
     tags: ["React", "MongoDB", "ChakraUI", "FastAPI", "Javascript", "JWTdown"],
-    imageUrl: dishdynamo,
+    imageUrl: createrecipe,
     projectUrl: "https://gitlab.com/team-scrumtious/dish-dynamo",
   },
   {
