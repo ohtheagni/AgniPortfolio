@@ -2,7 +2,6 @@
 
 import React from 'react'
 import SectionHeading from './section-heading'
-import { FaPaperPlane } from 'react-icons/fa'
 import { motion } from 'framer-motion';
 import { useSectionInView } from '@/lib/hooks';
 import { sendEmail } from '@/actions/sendEmail';
@@ -58,7 +57,7 @@ export default function Contact() {
             >
                 <input
                   required
-                  name="email"
+                  name="senderEmail"
                   maxLength={500}
                   placeholder="Your Email"
                   className=" px-4 h-14 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"

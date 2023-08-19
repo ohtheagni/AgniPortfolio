@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import React from "react";
 import SectionHeading from "./section-heading";
@@ -23,6 +23,11 @@ import { SiNextdotjs, SiMongodb, SiFastapi, SiFramer } from "react-icons/si";
 import { LiaNode } from "react-icons/lia";
 import { DiDjango } from "react-icons/di";
 
+// Define a type for skill icons
+type SkillIcons = {
+  [key: string]: JSX.Element | null;
+};
+
 const fadeInAnimationVariants = {
   initial: {
     opacity: 0,
@@ -41,7 +46,8 @@ export default function Skills() {
   const { ref } = useSectionInView("Skills");
 
   const getSkillIcon = (skill: string) => {
-    const skillIcons = {
+    // Create an object with skill icons
+    const skillIcons: SkillIcons = {
       HTML5: <FaHtml5 />,
       CSS: <FaCss3 />,
       Javascript: <BiLogoJavascript />,
@@ -58,7 +64,6 @@ export default function Skills() {
       Python: <FaPython />,
       Docker: <FaDocker />,
       FramerMotion: <SiFramer />,
-
     };
     return skillIcons[skill] || null;
   };
@@ -73,7 +78,7 @@ export default function Skills() {
       <ul className="flex flex-wrap justify-center gap-2 text-gray-800">
         {skillsData.map((skill, index) => (
           <motion.li
-            className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80 icon-size"
+            className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80 icon-size group"
             key={index}
             variants={fadeInAnimationVariants}
             initial="initial"
@@ -83,11 +88,10 @@ export default function Skills() {
             }}
             custom={index}
           >
-            <div className="tooltip-container">
-            {getSkillIcon(skill)}
-            <span className="tooltip-text  dark:text-white/80 hover:backdrop-blur-sm">{skill}</span>
+            <div className="tooltip-container group-hover:backdrop-blur-sm">
+              {getSkillIcon(skill)}
+              <span className="tooltip-text dark:text-white/80">{skill}</span>
             </div>
-
           </motion.li>
         ))}
       </ul>
