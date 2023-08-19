@@ -85,7 +85,7 @@ export const projectsData = [
   {
     title: "CarCar",
     description:
-      "Internal application for car dealerships to manage their inventory, service, and sales.",
+      "Worked as a fullstack developer to creating sales microservice for car dealership internal application to manage inventory, sales, and service",
     tags: ["Django", "SQLite", "Microservices", "React", "RestfulAPI", "Docker"],
     imageUrl: sales,
     projectUrl: "https://gitlab.com/charlene.xu92/project-beta",

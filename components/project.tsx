@@ -45,7 +45,7 @@ export default function Project({
             </a>
           </h3>
 
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
+          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70 mb-3">
             {description}
           </p>
 
