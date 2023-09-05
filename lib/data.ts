@@ -9,6 +9,7 @@ import dishdynamo from "@/public/dishdynamo.png"
 import sales from "@/public/sales.png"
 import createrecipe from "@/public/createrecipe.png"
 import ecommerceStore from "@/public/ecommerce-store.png"
+import ecomstore from "@/public/ecomstore.png"
 
 
 export const links = [
@@ -94,10 +95,18 @@ export const projectsData = [
   {
     title: "E-Commerce Dashboard & CMS",
     description:
-      "Built a fullly functional full-stack E-Commerce with Admin Dashboard web application  ",
+      "Fully functional E-Commerce web application with Content Management System and Dashboard",
     tags: ["NextJS", "SQLite", "App Router", "React", "Tailwind", "Prisma", "MySQL"],
     imageUrl: ecommerceStore,
     projectUrl: "https://ecommerce-admin-nine-black.vercel.app/",
+  },
+  {
+    title: "E-Commerce Store",
+    description:
+      "E-Commerce Store Front used in conjunction with E-Commerce Dashboard & CMS",
+    tags: ["NextJS", "SQLite", "App Router", "React", "Tailwind", "Prisma", "MySQL"],
+    imageUrl: ecomstore,
+    projectUrl: "https://ecommerce-store-three-omega.vercel.app/",
   }
 ] as const;
 
