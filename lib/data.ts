@@ -94,7 +94,7 @@ export const projectsData = [
   {
     title: "E-Commerce Dashboard & CMS",
     description:
-      "Worked as a fullstack developer to creating sales microservice for car dealership internal application to manage inventory, sales, and service",
+      "Built a fullly functional full-stack E-Commerce with Admin Dashboard web application  ",
     tags: ["NextJS", "SQLite", "App Router", "React", "Tailwind", "Prisma", "MySQL"],
     imageUrl: ecommerceStore,
     projectUrl: "https://ecommerce-admin-nine-black.vercel.app/",
